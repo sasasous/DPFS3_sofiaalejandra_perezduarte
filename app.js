@@ -9,6 +9,17 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+//Módulo express
+const express = require('express');
+
+//Método Router
+const router = express.Router();
+
+//Constante de la ruta raíz
+const productsRouter = require('./routes/productos');
+
+//Método use
+app.use('/productos', productsRouter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
