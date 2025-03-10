@@ -1,9 +1,10 @@
 //Módulo express
-const express = require('express');
+let express = require('express');
 
 //Método Router
-const router = express.Router();
+let router = express.Router();
 
+//Rutas
 // Ruta raíz de los productos /Inicio
 router.get('/', function (req, res) {
   res.send('Ruta de productos');
