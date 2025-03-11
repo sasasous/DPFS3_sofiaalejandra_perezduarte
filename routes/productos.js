@@ -4,11 +4,13 @@ let express = require('express');
 //Método Router
 let router = express.Router();
 
+//LLamada al controlador
+let ProductosControladores = require('..Controladores/ProductosControladores');
+
+
 //Rutas
 // Ruta raíz de los productos /Inicio
-router.get('/', function (req, res) {
- return res.send('Ruta de productos');
-});
+router.get('/', ProductosControladores.index);
 
 // Ruta para obtener un producto por su ID /Detalle de producto
 router.get('/detalle/:id', function (req, res) {
